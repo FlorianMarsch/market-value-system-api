@@ -123,7 +123,7 @@ public class Main {
 			String json = null;
 			String urlString = "http://football-api.florianmarsch.de/v1/api/league/" + id + "/players.json";
 			InputStream is = (InputStream) new URL(urlString).getContent();
-			json = IOUtils.toString(is, "UTF-8");
+			json = IOUtils.toString(is, "ISO-8859-1");
 			JSONArray players = new JSONArray(json);
 			for (int i = 0; i < players.length(); i++) {
 				JSONObject player = players.getJSONObject(i);
